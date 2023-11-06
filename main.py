@@ -3,13 +3,15 @@ import sys
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
 from class_go import Go
+import pygame
 # импортируем класс и тд
 
 
 class Play(QMainWindow):
     # задаем переменные; создаем игровую доску вызовом класса
     def __init__(self):
-        pygame.mixer.music.load("background_music.mp3")
+        pygame.mixer.init()
+        pygame.mixer.music.load("background_music.ogg")
         pygame.mixer.music.play(-1)
         self.board_ui = []
         self.board = Go(5, 0)
