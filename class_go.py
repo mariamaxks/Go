@@ -14,7 +14,7 @@ class Go:
         self.white = []
         self.groups = [self.black, self.white]
         # группа групп координат камней одного цвета -> [[координаты черных], [координаты белых]]
-        self.current_color = -1
+        self.current_color = 1
         self.alarm = False
         self.count_b = 0
         # вводим переменную-счетчик очков черных
@@ -137,7 +137,7 @@ class Go:
             if freedom == 0:
                 # если степень свободы == 0 ->
                 for i_cord in group:
-                    self.boar[i_cord[0]][i_cord[1]] = 0
+                    self.board[i_cord[0]][i_cord[1]] = 0
                     # снимаем группу камней(ня) с доски
                     # и прибавляем количество к счету цвета данного хода
                     if self.current_color == 1:
