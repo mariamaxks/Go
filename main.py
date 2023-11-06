@@ -9,6 +9,8 @@ from progect_go import Go
 class Play(QMainWindow):
     # задаем переменные; создаем игровую доску вызовом класса
     def __init__(self):
+        pygame.mixer.music.load("background_music.mp3")
+        pygame.mixer.music.play(-1)
         self.board_ui = []
         self.board = Go(5, 0)
         super().__init__()
