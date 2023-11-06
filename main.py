@@ -2,7 +2,7 @@ import sys
 
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
-from progect_go import Go
+from class_go import Go
 # импортируем класс и тд
 
 
@@ -14,7 +14,7 @@ class Play(QMainWindow):
         self.board_ui = []
         self.board = Go(5, 0)
         super().__init__()
-        uic.loadUi('design_go_ui.ui', self)
+        uic.loadUi('design_go.ui', self)
         # используем готовый дизайн
         self.board_matrix = [[self.pb11, self.pb21, self.pb31, self.pb41, self.pb51],
                              [self.pb12, self.pb22, self.pb32, self.pb42, self.pb52],
