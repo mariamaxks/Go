@@ -1,9 +1,9 @@
 import sys
+import pygame
 
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
 from class_go import Go
-import pygame
 # импортируем класс и тд
 
 
